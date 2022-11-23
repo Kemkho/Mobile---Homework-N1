@@ -16,7 +16,7 @@ console.log (trueOrFalse(4,5));
 
 
 // ----------------- TASK 2 ----------------- //
-     // Convert Fahrenheit  ro Celsius //
+     // Convert Fahrenheit  to Celsius //
 
 function Convertor (Fahrenheit) {
     if (typeof Fahrenheit === "number") {
