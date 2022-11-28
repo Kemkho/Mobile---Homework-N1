@@ -1,63 +1,72 @@
-// ----------------- TASK 1 ----------------- //
-    // return Equal or Not Equal //
 
-function trueOrFalse (a, b) {
-    if (a == b) {
-        return "Equal";
-    }
+// ------------ Task 1 ------------ //
+    //  min age from the group //
+const group = [
+    { name: "Temo", age: 25 },
+    { name: "Lasha", age: 21 },
+    { name: "Ana", age: 28 },
+  ];
 
-    else {
-        return "Not Equal";
-}
-}
-
-console.log (trueOrFalse(4,5));
-
-
-
-// ----------------- TASK 2 ----------------- //
-     // Convert Fahrenheit  to Celsius //
-
-function Convertor (Fahrenheit) {
-    if (typeof Fahrenheit === "number") {
-        return (Fahrenheit - 32) * 5/9;
-    } else {
-        return "False";
-    }
+function youngest (group) {
+    return Math.min (...group.map((obj) => obj.age));
 }
 
-console.log (Convertor(-10));
+console.log(youngest(group));
+
+  //  max age from the group //
+
+function oldest (group) {
+    return Math.max (...group.map((obj) => obj.age));
+}
+
+console.log (oldest(group));
 
 
 
-// ----------------- TASK 3 ----------------- //
+// ------------ Task 2 ------------ //
+//  object "user" into new object //
 
-      // Simple Calculator in JS//
+const user = {
+    name: 'Natali',
+    lastName: 'Kemkhadze',
+    age: 27,
+};
 
-function calcSum (a, b, operator) {
-    if (typeof a !== "number" || typeof b !== "number" || operator !== '+' & operator !== '-' & operator !== '/' & operator !== '*' ) {
-        return "False";
-    } else if (operator == '+') {
-            return a + b;
+const newUser = {
+    ...user
+};
+
+console.log (user);
+console.log (newUser);
+
+
+
+
+// ------------ Task 3 ------------ //
+   //  fist one to roll "3" //
+
+
+
+function game() {
+    return parseInt(Math.random() * 10 + 3);
+}
+
+function winner() {
+    do {
+        let player1 = game();
+        let player2 = game();
+        
+        if (player1 === 3){
+            return 'Winner: Player 1';
         }
-   
-    else if (operator == '-') {
-        return a - b;
+        if (player2 === 3){
+            return 'Winner: Player 2';
+        }
+        if (player1 === 3 && player2 === 3){
+            return "its a tie";
+        }
     }
-
-    else if (operator == '*') {
-        return a * b;
-    }
-
-    else if (operator == '/') {
-        return a / b;
-    }
-
+    while (true)
 }
 
-console.log (calcSum(5, 7,'-'));
-console.log (calcSum(5, 7,'+'));
-console.log (calcSum(5, 7,'/'));
-console.log (calcSum(5, 7,'*'));
-console.log (calcSum(5, '7','-'));
-console.log (calcSum(5, 7,'ok'));
+console.log(winner());
