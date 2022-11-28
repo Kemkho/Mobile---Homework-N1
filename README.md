@@ -1,9 +1,9 @@
 # Homeworks 
 
-Homework N1 
+Homework N2
 
-Task 1: Create a simple function that returns answers Equal (if it's equal) or Not Equal (if it's not equal);
+Task 1: Create users and find (show) the youngest (and oldest) from the group;
 
-Task 2: Create Fahrenheit to Celsius Converter;
+Task 2: Create an object ("user") and convert into a new user;
 
-Task 3: Create a simple Calculator (with operators '+'; '-'; '*'; '/') in JS. 
+Task 3: Create a function for the Roll&Dice game and determine the winner (first player to dice the "3").
